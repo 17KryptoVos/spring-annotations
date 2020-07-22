@@ -9,14 +9,17 @@ public class TennisCoach implements Coach {
     private FortuneService fortuneService;
 
     // No arg constructor
-//    public TennisCoach() {
-//    }
+    public TennisCoach() {
+        System.out.println("Default no-arg constructor");
+    }
 
+    /*
     // Define constructor for dependecy injection
-//    @Autowired
+    @Autowired
     public TennisCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
+    */
 
     @Override
     public String getDailyWorkout() {
@@ -32,4 +35,9 @@ public class TennisCoach implements Coach {
 
     }
 
+    @Autowired
+    public void setFortuneService(FortuneService fortuneService) {
+        System.out.println("Inside setter method!");
+        this.fortuneService = fortuneService;
+    }
 }
