@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
-    // Define private field for the dependecy
+    // Define private field for the dependency
+    @Autowired
     private FortuneService fortuneService;
 
     // No arg constructor
@@ -44,9 +45,12 @@ public class TennisCoach implements Coach {
     }
      */
 
+    /*
     @Autowired
+    // Method inejction
     public void doSomeCrazystuff(FortuneService fortuneService) {
         System.out.println("Inside custom method");
         this.fortuneService = fortuneService;
     }
+     */
 }
