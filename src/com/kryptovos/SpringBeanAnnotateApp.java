@@ -17,5 +17,6 @@ public class SpringBeanAnnotateApp {
         System.out.println("Is it the same? " + result);
 
         // close bean
+        context.close();
     }
 }

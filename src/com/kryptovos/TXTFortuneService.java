@@ -2,6 +2,7 @@ package com.kryptovos;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,12 @@ public class TXTFortuneService implements FortuneService {
     Random rand = new Random();
 
     public TXTFortuneService() {
+        System.out.println("No-arg constructor");
+    }
+
+    @PostConstruct
+    public void loadTheFileFortuneService() {
+        System.out.println("Postconstructing");
         File file = new File(fileName);
         System.out.println("Reading fortunes from file: " + file);
         System.out.println("File exists: " + file.exists());

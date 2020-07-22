@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
     // Define private field for the dependency
 
@@ -27,6 +29,19 @@ public class TennisCoach implements Coach {
         this.fortuneService = fortuneService;
     }
     */
+
+    @PostConstruct
+    // Define init method
+    public void doMyStartUpStuff(){
+        System.out.println("Inside startup stuff");
+    }
+
+    @PreDestroy
+    // Define destroy method
+    public void doMyDestroyStuff(){
+        System.out.println("Inside destroy stuff");
+    }
+
 
     // Combining Autowired with constructor
     @Autowired
