@@ -9,7 +9,7 @@ public class SpringAnnotateApp {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // Get Bean from Spring container
-        Coach tennisCoach = context.getBean("thatSillyCoach", Coach.class);
+        Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
 
         // Execute nethods
         System.out.println(tennisCoach.getDailyWorkout());

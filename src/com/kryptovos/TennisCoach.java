@@ -2,7 +2,7 @@ package com.kryptovos;
 
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
+@Component
 public class TennisCoach implements Coach {
     // Define private field for the dependecy
     private FortuneService fortuneService;
