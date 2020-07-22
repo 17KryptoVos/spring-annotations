@@ -1,9 +1,24 @@
 package com.kryptovos;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FoodCoach implements Coach{
+public class FoodCoach implements Coach {
+
+
+    @Autowired
+    @Qualifier("randomFortuneService")
+    private FortuneService fortuneService;
+
+    @Value("${foo.team}")
+    private String team;
+
+    @Value("${foo.email}")
+    private String email;
+
     @Override
     public String getDailyWorkout() {
         return "Eat 3 chocobars";
@@ -11,6 +26,14 @@ public class FoodCoach implements Coach{
 
     @Override
     public String getDailyFortune() {
-        return null;
+        return fortuneService.getFortune();
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

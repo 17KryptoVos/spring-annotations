@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
     // Define private field for the dependency
+
+//    Field injections
 //    @Autowired
 //    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
