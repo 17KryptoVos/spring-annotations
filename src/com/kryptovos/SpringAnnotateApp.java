@@ -24,6 +24,10 @@ public class SpringAnnotateApp {
         System.out.println(foodCoach.getTeam());
         System.out.println(foodCoach.getEmail());
 
+        System.out.println("----------------------");
+
+
+
         // Close
         context.close();
 

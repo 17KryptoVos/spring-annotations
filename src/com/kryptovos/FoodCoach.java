@@ -10,7 +10,7 @@ public class FoodCoach implements Coach {
 
 
     @Autowired
-    @Qualifier("randomFortuneService")
+    @Qualifier("TXTFortuneService")
     private FortuneService fortuneService;
 
     @Value("${foo.team}")
