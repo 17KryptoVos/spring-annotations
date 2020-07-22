@@ -10,11 +10,10 @@ public class SpringAnnotateApp {
 
         // Get Bean from Spring container
         Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
-        Coach foodCoach = context.getBean("foodCoach", Coach.class);
 
         // Execute nethods
         System.out.println(tennisCoach.getDailyWorkout());
-        System.out.println(foodCoach.getDailyWorkout());
+        System.out.println(tennisCoach.getDailyFortune());
 
         // Close
         context.close();
