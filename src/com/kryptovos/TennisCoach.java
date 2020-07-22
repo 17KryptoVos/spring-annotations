@@ -9,11 +9,11 @@ public class TennisCoach implements Coach {
     private FortuneService fortuneService;
 
     // No arg constructor
-    public TennisCoach() {
-    }
+//    public TennisCoach() {
+//    }
 
     // Define constructor for dependecy injection
-    @Autowired
+//    @Autowired
     public TennisCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
